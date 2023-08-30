@@ -1,6 +1,5 @@
 <script>
 import axios from 'axios';
-import Main from './components/AppMain.vue';
 import Header from './components/AppHeader.vue';
 import {store} from './data/store.js';
 
@@ -11,7 +10,6 @@ export default{
     }
   },
   components:{
-    Main,
     Header,
   },
   mounted(){

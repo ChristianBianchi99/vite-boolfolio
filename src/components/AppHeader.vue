@@ -7,11 +7,11 @@ export default{
       links:[
         {
             label:  'Home',
-            link:   '/',
+            routeName:   'home',
         },
         {
             label:  'Projects',
-            link:   '/projects',
+            routeName:   'projects',
         }
       ],
     }
@@ -29,7 +29,9 @@ export default{
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item" v-for="(link, index) in links" :key="index">
-          <a class="nav-link" href="#">{{ link.label }}</a>
+          <router-link class="nav-link" :to="{ name: link.routeName }">
+            {{ link.label }}
+          </router-link>
         </li>
       </ul>
     </div>
@@ -38,5 +40,10 @@ export default{
     </div>
 </template>
 <style scoped lang="scss">
-    
+// li{
+//     margin-right: 10px;
+//     router-link{
+//         text-decoration: none;
+//     }
+// }
 </style>
