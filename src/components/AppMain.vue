@@ -13,7 +13,7 @@ export default{
         <div class="row">
             <div class='col-12'>
                 <div class="card" v-for='project in store.projects' :key='project.id'>
-                    <img :src="project.cover_image" class="card-img-top" :alt="project.name">
+                    <img :src="store.imageUrl+project.cover_image" class="card-img-top" :alt="project.name">
                     <div class="card-body">
                         <h5 class="card-title">{{ project.name }}</h5>
                         <p class="card-text">{{ project.description }}</p>

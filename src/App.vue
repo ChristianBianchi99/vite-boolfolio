@@ -18,7 +18,7 @@ export default{
   methods:{
     getProjects(){
       store.projects= '';
-      axios.get(store.apiUrl + '/api/projects').then((response) => {
+      axios.get(store.baseApiUrl + '/api/projects').then((response) => {
         store.projects = response.data.results;
       });
     }
