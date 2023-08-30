@@ -40,10 +40,5 @@ export default{
     </div>
 </template>
 <style scoped lang="scss">
-// li{
-//     margin-right: 10px;
-//     router-link{
-//         text-decoration: none;
-//     }
-// }
+
 </style>

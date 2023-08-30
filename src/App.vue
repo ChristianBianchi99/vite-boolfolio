@@ -27,10 +27,20 @@ export default{
 </script>
 
 <template>
-  <Header/>
-  <router-view></router-view>
+  <Header class="header"/>
+  <router-view class="main"></router-view>
 </template>
 
 <style lang="scss">
   @use './styles/generals.scss' as *;
+  .header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .main{
+    margin-top: 50px;
+  }
 </style>
