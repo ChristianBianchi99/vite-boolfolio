@@ -19,7 +19,11 @@ export default{
     getProjects(){
       store.projects= '';
       axios.get(store.baseApiUrl + '/api/projects').then((response) => {
-        store.projects = response.data.results;
+        if(response.data.success){
+          store.projects = response.data.results;
+        } else {
+          this.$router.push({ name: 'not-found' });
+        }
       });
     }
   }

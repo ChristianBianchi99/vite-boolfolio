@@ -1,11 +1,20 @@
 <script>
 import {store} from '../data/store.js';
 export default{
-  data(){
-    return{
-      store,
+    data(){
+        return{
+        store,
+        }
+    },
+    methods:{
+        truncateText(text){
+            if(text.length > 50){
+                return text.substr(0,75)+'. . .';
+            } else {
+                return text
+            }
+        }
     }
-  },
 }
 </script>
 <template lang="">
@@ -16,8 +25,11 @@ export default{
                     <img :src="store.imageUrl+project.cover_image" class="card-img-top" :alt="project.name">
                     <div class="card-body">
                         <h5 class="card-title">{{ project.name }}</h5>
-                        <p class="card-text">{{ project.description }}</p>
+                        <p class="card-text">{{ truncateText(project.description) }}</p>
                     </div>
+                    <router-link :to="{ name: 'projects-show', params: { slug: project.slug } }" class="btn btn-primary">
+                        Visualizza
+                    </router-link>
                 </div>
             </div>
         </div>
