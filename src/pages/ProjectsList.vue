@@ -26,10 +26,10 @@ export default{
                     <div class="card-body">
                         <h5 class="card-title">{{ project.name }}</h5>
                         <p class="card-text">{{ truncateText(project.description) }}</p>
+                        <router-link :to="{ name: 'projects-show', params: { slug: project.slug } }" class="btn btn-primary">
+                            Visualizza
+                        </router-link>
                     </div>
-                    <router-link :to="{ name: 'projects-show', params: { slug: project.slug } }" class="btn btn-primary">
-                        Visualizza
-                    </router-link>
                 </div>
             </div>
         </div>
