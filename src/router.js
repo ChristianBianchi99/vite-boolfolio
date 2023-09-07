@@ -3,7 +3,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from './pages/AppHome.vue';
 import ProjectsList from './pages/ProjectsList.vue';
 import ProjectsShow from './pages/ProjectsShow.vue';
-import NotFound from './pages/NotFound.vue'
+import NotFound from './pages/NotFound.vue';
+import ContactUs from './pages/ContactUs.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -22,6 +23,11 @@ const router = createRouter({
             path:       '/projects/:slug',
             name:       'projects-show',
             component:  ProjectsShow,
+        },
+        {
+            path:       '/contact-us',
+            name:       'contact-us',
+            component:  ContactUs,
         },
         {
             path:       '/not-found',
